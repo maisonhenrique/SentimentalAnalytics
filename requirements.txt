@@ -1,7 +1,5 @@
 pandas
 joblib
-base64
-io
 re
 nltk
 streamlit
