@@ -16,13 +16,13 @@ warnings.filterwarnings('ignore')
 
 st.set_page_config(layout='wide')
 
-# configurações
+# Configurações
 pd.set_option('display.max_rows', 200)
 pd.set_option('display.max_columns', 100)
 pd.set_option('display.float_format', lambda x: '%.2f' % x)
 
 # Base de Dados
-dados = pd.read_csv('SentimentalAnalytics/modelo_oceane_instagram_posts_comments-limpo.csv', sep=';', error_bad_lines=False)
+dados = pd.read_csv('SentimentalAnalytics/modelo_oceane_instagram_posts_comments.csv', sep=';', error_bad_lines=False)
 
 # Removendo dados nulos
 dados = dados.dropna()
@@ -76,7 +76,7 @@ df['comment'] = df['comment'].apply(limpeza_dados)
 
 
 # StopWords
-#nltk.download('stopwords')
+nltk.download('stopwords')
 grupo_palavras = nltk.corpus.stopwords.words('portuguese')
 
 def remover_stopwords (texto):
@@ -93,7 +93,7 @@ df['comment'] = df['comment'].apply(remover_stopwords)
 
 
 # Extração de Radical
-#nltk.download('rslp')
+nltk.download('rslp')
 radical = nltk.stem.RSLPStemmer()
 
 def extracao_radical (texto):

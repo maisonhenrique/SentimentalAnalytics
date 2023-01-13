@@ -1,6 +1,5 @@
 pandas
 joblib
-re
 nltk
 streamlit
 scikit_learn
