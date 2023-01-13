@@ -126,7 +126,7 @@ X_train_1 = vectorizer.fit_transform(X_train)
 type(X_train_1)
 
 # Aplicando o modelo
-model_lr = joblib.load('SentimentalAnalytics/modelo_lr.sav')
+model_lr = joblib.load('modelo_lr.sav')
 model_lr.fit(X_train_1, y_train)
 
 X_test_1 = vectorizer.transform(X_test)
@@ -160,7 +160,7 @@ X_train_2 = vectorizer.fit_transform(X_train_cont)
 type(X_train_2)
 
 # Aplicando o modelo
-model_lr_cont = joblib.load('SentimentalAnalytics/modelo_lr_cont.sav')
+model_lr_cont = joblib.load('modelo_lr_cont.sav')
 model_lr_cont.fit(X_train_2, y_train_cont)
 
 X_test_cont_2 = vectorizer.transform(X_test_cont)
