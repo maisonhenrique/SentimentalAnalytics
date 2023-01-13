@@ -22,7 +22,7 @@ pd.set_option('display.max_columns', 100)
 pd.set_option('display.float_format', lambda x: '%.2f' % x)
 
 # Base de Dados
-dados = pd.read_csv('SentimentalAnalytics/modelo_oceane_instagram_posts_comments.csv', sep=';', error_bad_lines=False)
+dados = pd.read_csv('modelo_oceane_instagram_posts_comments.csv', sep=';', error_bad_lines=False)
 
 # Removendo dados nulos
 dados = dados.dropna()
